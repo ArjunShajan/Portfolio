@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +44,7 @@
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
   }
+
   ::selection { background: #4ee1ff; color: #0a0d12; }
 
   ::-webkit-scrollbar { width: 10px; }
@@ -80,6 +82,7 @@
     vertical-align: text-bottom;
     animation: blink 1s step-end infinite;
   }
+
   @keyframes blink { 50% { opacity: 0; } }
 
   .eyebrow::before {
@@ -96,6 +99,7 @@
     border: 1px solid #1e2836;
     transition: border-color .3s ease, transform .3s ease, box-shadow .3s ease;
   }
+
   .card:hover {
     border-color: #4ee1ff55;
     transform: translateY(-4px);
@@ -109,6 +113,7 @@
     transform: translateY(28px);
     transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
   }
+
   .reveal.in { opacity: 1; transform: translateY(0); }
 
   .stagger-1 { transition-delay: .05s; }
@@ -119,6 +124,7 @@
   .skill-pill {
     transition: background .25s ease, color .25s ease, border-color .25s ease;
   }
+
   .skill-pill:hover {
     background: #4ee1ff;
     color: #0a0d12;
@@ -128,14 +134,17 @@
   .skill-item {
     transition: border-color .25s ease, transform .25s ease, background .25s ease;
   }
+
   .skill-item:hover {
     border-color: #4ee1ff66;
     background: #131a28;
     transform: translateY(-2px) scale(1.02);
   }
+
   .skill-item img {
     transition: transform .25s ease;
   }
+
   .skill-item:hover img {
     transform: scale(1.15) rotate(-4deg);
   }
@@ -143,6 +152,7 @@
   .nav-link {
     position: relative;
   }
+
   .nav-link::after {
     content: '';
     position: absolute;
@@ -151,6 +161,7 @@
     background: #4ee1ff;
     transition: width .25s ease;
   }
+
   .nav-link:hover::after { width: 100%; }
 
   .progress-bar {
@@ -166,6 +177,7 @@
     width: max-content;
     animation: scroll-left 28s linear infinite;
   }
+
   @keyframes scroll-left {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
@@ -174,6 +186,7 @@
   .blink-dot {
     animation: pulse-dot 1.6s ease-in-out infinite;
   }
+
   @keyframes pulse-dot {
     0%, 100% { opacity: 1; }
     50% { opacity: .3; }
@@ -182,11 +195,20 @@
   .tilt-wrap { perspective: 900px; }
 
   @media (prefers-reduced-motion: reduce) {
-    * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
-    .reveal { opacity: 1 !important; transform: none !important; }
+    * {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
 </style>
 </head>
+
 <body class="relative">
 
 <canvas id="netCanvas"></canvas>
@@ -200,13 +222,17 @@
       <span class="dot bg-mint blink-dot"></span>
       arjun<span class="text-cyan">@</span>shajan<span class="text-muted">:~$</span>
     </a>
+
     <div class="hidden md:flex gap-8 text-muted">
       <a href="#about" class="nav-link hover:text-ink">about</a>
       <a href="#projects" class="nav-link hover:text-ink">projects</a>
       <a href="#stack" class="nav-link hover:text-ink">stack</a>
       <a href="#contact" class="nav-link hover:text-ink">contact</a>
     </div>
-    <a href="#contact" class="border border-cyan/40 text-cyan px-4 py-1.5 rounded hover:bg-cyan hover:text-bg transition-colors">connect</a>
+
+    <a href="#contact" class="border border-cyan/40 text-cyan px-4 py-1.5 rounded hover:bg-cyan hover:text-bg transition-colors">
+      connect
+    </a>
   </nav>
 </header>
 
@@ -223,8 +249,10 @@
           <span class="dot bg-[#febc2e]"></span>
           <span class="dot bg-[#28c840]"></span>
         </div>
+
         <p class="text-muted">$ whoami</p>
         <p id="typeLine1" class="text-ink font-semibold min-h-[1.4em]"></p>
+
         <p class="text-muted mt-2">$ status --check</p>
         <p id="typeLine2" class="text-cyan min-h-[1.4em]"></p>
       </div>
@@ -245,6 +273,7 @@
         <a href="#projects" class="bg-cyan text-bg font-mono font-bold px-6 py-3 rounded-lg hover:bg-white transition-colors">
           view_projects()
         </a>
+
         <a href="mailto:arjunshajan193@gmail.com" class="border border-line font-mono px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">
           say_hello()
         </a>
@@ -254,6 +283,7 @@
     <div class="md:col-span-2 tilt-wrap reveal" id="heroCard">
       <div class="card rounded-2xl p-6 font-mono text-sm" id="tiltCard">
         <p class="text-muted mb-3">// current_focus.json</p>
+
         <pre class="text-ink leading-6"><span class="text-muted">{</span>
   <span class="text-cyan">"role"</span>: <span class="text-mint">"AI/DS Student"</span>,
   <span class="text-cyan">"location"</span>: <span class="text-mint">"India"</span>,
@@ -274,6 +304,7 @@
 <!-- MARQUEE -->
 <div class="relative z-10 border-y border-line bg-panel/60 py-3 overflow-hidden">
   <div class="marquee-track font-mono text-sm text-muted gap-10 whitespace-nowrap">
+
     <div class="flex gap-10 pr-10">
       <span>PYTHON</span><span class="text-cyan">◆</span>
       <span>MACHINE LEARNING</span><span class="text-cyan">◆</span>
@@ -283,6 +314,7 @@
       <span>FASTAPI</span><span class="text-cyan">◆</span>
       <span>DEEP LEARNING</span><span class="text-cyan">◆</span>
     </div>
+
     <div class="flex gap-10 pr-10" aria-hidden="true">
       <span>PYTHON</span><span class="text-cyan">◆</span>
       <span>MACHINE LEARNING</span><span class="text-cyan">◆</span>
@@ -292,15 +324,21 @@
       <span>FASTAPI</span><span class="text-cyan">◆</span>
       <span>DEEP LEARNING</span><span class="text-cyan">◆</span>
     </div>
+
   </div>
 </div>
 
 <!-- ABOUT -->
 <section id="about" class="relative z-10 max-w-6xl mx-auto px-6 py-28">
+
   <p class="eyebrow font-mono text-mint text-sm mb-3 reveal">01_about</p>
-  <h2 class="font-mono font-bold text-3xl sm:text-4xl mb-12 reveal">Currently learning &amp; building</h2>
+
+  <h2 class="font-mono font-bold text-3xl sm:text-4xl mb-12 reveal">
+    Currently learning &amp; building
+  </h2>
 
   <div class="grid md:grid-cols-3 gap-6">
+
     <div class="md:col-span-2 card rounded-2xl p-8 reveal stagger-1">
       <p class="text-ink text-lg leading-relaxed">
         I'm an <span class="text-cyan font-semibold">Artificial Intelligence and Data Science student</span>
@@ -308,6 +346,7 @@
         where AI meets real products — resume analysis engines, career-guidance platforms, face
         recognition systems, and emotion-aware interfaces.
       </p>
+
       <p class="text-muted leading-relaxed mt-4">
         Most of what I know comes from academic projects, personal builds, and a habit of
         experimenting until something actually works end-to-end — not just in a notebook.
@@ -316,64 +355,119 @@
 
     <div class="card rounded-2xl p-6 reveal stagger-2">
       <p class="font-mono text-sm text-muted mb-4">learning_now[]</p>
+
       <ul class="space-y-3 font-mono text-sm">
-        <li class="flex items-center gap-2"><span class="dot bg-cyan"></span> Deep Learning &amp; Neural Nets</li>
-        <li class="flex items-center gap-2"><span class="dot bg-violet"></span> NLP</li>
-        <li class="flex items-center gap-2"><span class="dot bg-mint"></span> Computer Vision</li>
-        <li class="flex items-center gap-2"><span class="dot bg-amber"></span> React + FastAPI</li>
+        <li class="flex items-center gap-2">
+          <span class="dot bg-cyan"></span>
+          Deep Learning &amp; Neural Nets
+        </li>
+
+        <li class="flex items-center gap-2">
+          <span class="dot bg-violet"></span>
+          NLP
+        </li>
+
+        <li class="flex items-center gap-2">
+          <span class="dot bg-mint"></span>
+          Computer Vision
+        </li>
+
+        <li class="flex items-center gap-2">
+          <span class="dot bg-amber"></span>
+          React + FastAPI
+        </li>
       </ul>
     </div>
+
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="relative z-10 max-w-6xl mx-auto px-6 py-16">
+
   <p class="eyebrow font-mono text-mint text-sm mb-3 reveal">02_projects</p>
-  <h2 class="font-mono font-bold text-3xl sm:text-4xl mb-12 reveal">Things I've shipped</h2>
+
+  <h2 class="font-mono font-bold text-3xl sm:text-4xl mb-12 reveal">
+    Things I've shipped
+  </h2>
 
   <div class="grid md:grid-cols-2 gap-6" id="projectGrid">
 
-    <a href="https://github.com/ArjunShajan/Ai-Interview-Preparation-Tools-Using-Resume-Analyze" target="_blank" rel="noopener" class="card rounded-2xl p-6 reveal stagger-1 block group">
+    <!-- AI INTERVIEW PREPARATION TOOL -->
+    <a href="https://github.com/ArjunShajan/Ai-Interview-Preparation-Tools-Using-Resume-Analyze"
+       target="_blank"
+       rel="noopener"
+       class="card rounded-2xl p-6 reveal stagger-1 block group">
+
       <div class="flex items-center justify-between mb-4">
         <span class="text-2xl">🎯</span>
-        <span class="font-mono text-xs text-mint border border-mint/30 rounded-full px-3 py-1">NLP</span>
+
+        <span class="font-mono text-xs text-mint border border-mint/30 rounded-full px-3 py-1">
+          NLP
+        </span>
       </div>
-      <h3 class="font-mono font-bold text-xl mb-2">AI Interview Preparation Tool</h3>
+
+      <h3 class="font-mono font-bold text-xl mb-2">
+        AI Interview Preparation Tool
+      </h3>
+
       <p class="text-muted text-sm leading-relaxed mb-4">
         Analyzes resumes and skills with NLP to generate personalized technical and HR
         interview questions, then scores performance with AI-based feedback.
       </p>
+
       <ul class="text-sm text-ink/80 space-y-1 mb-5">
         <li>› Resume analysis via NLP</li>
         <li>› Personalized question generation</li>
         <li>› Skill assessment &amp; performance feedback</li>
       </ul>
+
       <div class="flex flex-wrap gap-2 font-mono text-xs mb-5">
         <span class="skill-pill border border-line rounded px-2 py-1">Python</span>
         <span class="skill-pill border border-line rounded px-2 py-1">FastAPI</span>
         <span class="skill-pill border border-line rounded px-2 py-1">NLP</span>
       </div>
+
       <div class="flex items-center gap-2 font-mono text-xs text-muted group-hover:text-cyan transition-colors">
-        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-4 h-4" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=github"
+             alt="GitHub"
+             class="w-4 h-4"
+             loading="lazy" />
+
         <span>View repository →</span>
       </div>
     </a>
 
-    <a href="https://github.com/ArjunShajan/PathFinder-AI" target="_blank" rel="noopener" class="card rounded-2xl p-6 reveal stagger-2 block group">
+
+    <!-- PATHFINDER AI -->
+    <a href="https://github.com/ArjunShajan/PathFinder-AI"
+       target="_blank"
+       rel="noopener"
+       class="card rounded-2xl p-6 reveal stagger-2 block group">
+
       <div class="flex items-center justify-between mb-4">
         <span class="text-2xl">🧭</span>
-        <span class="font-mono text-xs text-violet border border-violet/30 rounded-full px-3 py-1">FULL-STACK AI</span>
+
+        <span class="font-mono text-xs text-violet border border-violet/30 rounded-full px-3 py-1">
+          FULL-STACK AI
+        </span>
       </div>
-      <h3 class="font-mono font-bold text-xl mb-2">PathFinder AI</h3>
+
+      <h3 class="font-mono font-bold text-xl mb-2">
+        PathFinder AI
+      </h3>
+
       <p class="text-muted text-sm leading-relaxed mb-4">
         A career discovery platform that identifies skill gaps and builds personalized
         learning roadmaps — complete with an AI mentor chat and secure auth.
       </p>
+
       <ul class="text-sm text-ink/80 space-y-1 mb-5">
         <li>› AI-based career recommendation</li>
         <li>› Learning roadmap generation</li>
         <li>› AI mentor chat + user dashboard</li>
       </ul>
+
       <div class="flex flex-wrap gap-2 font-mono text-xs mb-5">
         <span class="skill-pill border border-line rounded px-2 py-1">React</span>
         <span class="skill-pill border border-line rounded px-2 py-1">FastAPI</span>
@@ -381,62 +475,151 @@
         <span class="skill-pill border border-line rounded px-2 py-1">SQLAlchemy</span>
         <span class="skill-pill border border-line rounded px-2 py-1">JWT</span>
       </div>
+
       <div class="flex items-center gap-2 font-mono text-xs text-muted group-hover:text-cyan transition-colors">
-        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-4 h-4" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=github"
+             alt="GitHub"
+             class="w-4 h-4"
+             loading="lazy" />
+
         <span>View repository →</span>
       </div>
     </a>
 
-    <a href="https://github.com/ArjunShajan/Attendance-monitoring-system" target="_blank" rel="noopener" class="card rounded-2xl p-6 reveal stagger-3 block group">
+
+    <!-- AI ATTENDANCE MONITORING SYSTEM -->
+    <a href="https://github.com/ArjunShajan/Attendance-monitoring-system"
+       target="_blank"
+       rel="noopener"
+       class="card rounded-2xl p-6 reveal stagger-3 block group">
+
       <div class="flex items-center justify-between mb-4">
         <span class="text-2xl">📸</span>
-        <span class="font-mono text-xs text-amber border border-amber/30 rounded-full px-3 py-1">COMPUTER VISION</span>
+
+        <span class="font-mono text-xs text-amber border border-amber/30 rounded-full px-3 py-1">
+          COMPUTER VISION
+        </span>
       </div>
-      <h3 class="font-mono font-bold text-xl mb-2">AI Attendance Monitoring System</h3>
+
+      <h3 class="font-mono font-bold text-xl mb-2">
+        AI Attendance Monitoring System
+      </h3>
+
       <p class="text-muted text-sm leading-relaxed mb-4">
         Automates attendance using real-time face recognition — contactless,
         secure, and self-reporting.
       </p>
+
       <ul class="text-sm text-ink/80 space-y-1 mb-5">
         <li>› Real-time face recognition</li>
         <li>› Automatic attendance recording</li>
         <li>› Attendance analytics &amp; reports</li>
       </ul>
+
       <div class="flex flex-wrap gap-2 font-mono text-xs mb-5">
         <span class="skill-pill border border-line rounded px-2 py-1">Python</span>
         <span class="skill-pill border border-line rounded px-2 py-1">OpenCV</span>
         <span class="skill-pill border border-line rounded px-2 py-1">SQL</span>
       </div>
+
       <div class="flex items-center gap-2 font-mono text-xs text-muted group-hover:text-cyan transition-colors">
-        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-4 h-4" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=github"
+             alt="GitHub"
+             class="w-4 h-4"
+             loading="lazy" />
+
         <span>View repository →</span>
       </div>
     </a>
 
-    <a href="https://github.com/ArjunShajan/Emotion-detection" target="_blank" rel="noopener" class="card rounded-2xl p-6 reveal stagger-4 block group">
+
+    <!-- REAL-TIME EMOTION DETECTION -->
+    <a href="https://github.com/ArjunShajan/Emotion-detection"
+       target="_blank"
+       rel="noopener"
+       class="card rounded-2xl p-6 reveal stagger-4 block group">
+
       <div class="flex items-center justify-between mb-4">
         <span class="text-2xl">😊</span>
-        <span class="font-mono text-xs text-cyan border border-cyan/30 rounded-full px-3 py-1">DEEP LEARNING</span>
+
+        <span class="font-mono text-xs text-cyan border border-cyan/30 rounded-full px-3 py-1">
+          DEEP LEARNING
+        </span>
       </div>
-      <h3 class="font-mono font-bold text-xl mb-2">Real-Time Emotion Detection</h3>
+
+      <h3 class="font-mono font-bold text-xl mb-2">
+        Real-Time Emotion Detection
+      </h3>
+
       <p class="text-muted text-sm leading-relaxed mb-4">
         Detects 7 distinct human emotions live from a webcam feed using a
         Mini-XCEPTION model.
       </p>
+
       <ul class="text-sm text-ink/80 space-y-1 mb-5">
         <li>› Live face detection</li>
         <li>› 7-class emotion classification</li>
         <li>› Real-time camera inference</li>
       </ul>
+
       <div class="flex flex-wrap gap-2 font-mono text-xs mb-5">
         <span class="skill-pill border border-line rounded px-2 py-1">TensorFlow</span>
         <span class="skill-pill border border-line rounded px-2 py-1">Keras</span>
         <span class="skill-pill border border-line rounded px-2 py-1">OpenCV</span>
         <span class="skill-pill border border-line rounded px-2 py-1">MediaPipe</span>
       </div>
+
       <div class="flex items-center gap-2 font-mono text-xs text-muted group-hover:text-cyan transition-colors">
-        <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-4 h-4" loading="lazy" />
+        <img src="https://skillicons.dev/icons?i=github"
+             alt="GitHub"
+             class="w-4 h-4"
+             loading="lazy" />
+
         <span>View repository →</span>
+      </div>
+    </a>
+
+
+    <!-- E-COMMERCE SALES & CUSTOMER ANALYTICS -->
+    <a href="#"
+       target="_blank"
+       rel="noopener"
+       class="card rounded-2xl p-6 reveal stagger-4 block group">
+
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-2xl">📊</span>
+
+        <span class="font-mono text-xs text-violet border border-violet/30 rounded-full px-3 py-1">
+          POWER BI
+        </span>
+      </div>
+
+      <h3 class="font-mono font-bold text-xl mb-2">
+        E-Commerce Sales &amp; Customer Analytics
+      </h3>
+
+      <p class="text-muted text-sm leading-relaxed mb-4">
+        An interactive Power BI analytics dashboard that transforms e-commerce sales
+        and customer data into actionable insights through sales, profit, customer,
+        and geographical analysis.
+      </p>
+
+      <ul class="text-sm text-ink/80 space-y-1 mb-5">
+        <li>› Executive sales &amp; profit dashboard</li>
+        <li>› Customer performance &amp; segmentation analysis</li>
+        <li>› Regional and state-level sales analysis</li>
+      </ul>
+
+      <div class="flex flex-wrap gap-2 font-mono text-xs mb-5">
+        <span class="skill-pill border border-line rounded px-2 py-1">Power BI</span>
+        <span class="skill-pill border border-line rounded px-2 py-1">DAX</span>
+        <span class="skill-pill border border-line rounded px-2 py-1">Data Analytics</span>
+        <span class="skill-pill border border-line rounded px-2 py-1">Data Visualization</span>
+      </div>
+
+      <div class="flex items-center gap-2 font-mono text-xs text-muted group-hover:text-cyan transition-colors">
+        <span class="text-xl">📈</span>
+        <span>View dashboard →</span>
       </div>
     </a>
 
@@ -445,145 +628,297 @@
 
 <!-- STACK -->
 <section id="stack" class="relative z-10 max-w-6xl mx-auto px-6 py-28">
+
   <p class="eyebrow font-mono text-mint text-sm mb-3 reveal">03_stack</p>
-  <h2 class="font-mono font-bold text-3xl sm:text-4xl mb-12 reveal">Tools I reach for</h2>
+
+  <h2 class="font-mono font-bold text-3xl sm:text-4xl mb-12 reveal">
+    Tools I reach for
+  </h2>
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 items-start">
+
+    <!-- LANGUAGES -->
     <div class="card rounded-xl p-5 reveal stagger-1 h-full">
+
       <p class="font-mono text-cyan text-sm mb-4">01_languages</p>
+
       <div class="grid grid-cols-1 gap-2.5">
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=python" alt="Python" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=python"
+               alt="Python"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">Python</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=mysql" alt="SQL" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=mysql"
+               alt="SQL"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">SQL</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=r" alt="R" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=r"
+               alt="R"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">R</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=js" alt="JavaScript" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=js"
+               alt="JavaScript"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">JavaScript</span>
         </div>
+
       </div>
     </div>
 
+
+    <!-- AI / ML -->
     <div class="card rounded-xl p-5 reveal stagger-2 h-full">
+
       <p class="font-mono text-violet text-sm mb-4">02_ai--ml</p>
+
       <div class="grid grid-cols-1 gap-2.5">
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="Machine Learning" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://img.icons8.com/color/48/artificial-intelligence.png"
+               alt="Machine Learning"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">Machine Learning</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://img.icons8.com/color/48/mind-map.png" alt="Deep Learning" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://img.icons8.com/color/48/mind-map.png"
+               alt="Deep Learning"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">Deep Learning</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://img.icons8.com/color/48/chat.png" alt="NLP" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://img.icons8.com/color/48/chat.png"
+               alt="NLP"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">NLP</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://img.icons8.com/color/48/facial-recognition-scan.png" alt="Computer Vision" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://img.icons8.com/color/48/facial-recognition-scan.png"
+               alt="Computer Vision"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">Computer Vision</span>
         </div>
+
       </div>
     </div>
 
+
+    <!-- FRAMEWORKS -->
     <div class="card rounded-xl p-5 reveal stagger-3 h-full">
+
       <p class="font-mono text-mint text-sm mb-4">03_frameworks</p>
+
       <div class="grid grid-cols-1 gap-2.5">
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=tensorflow" alt="TensorFlow" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=tensorflow"
+               alt="TensorFlow"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">TensorFlow</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=keras" alt="Keras" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=keras"
+               alt="Keras"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">Keras</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=pytorch" alt="PyTorch" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=pytorch"
+               alt="PyTorch"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">PyTorch</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=opencv" alt="OpenCV" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=opencv"
+               alt="OpenCV"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">OpenCV</span>
         </div>
+
       </div>
     </div>
 
+
+    <!-- WEB -->
     <div class="card rounded-xl p-5 reveal stagger-4 h-full">
+
       <p class="font-mono text-amber text-sm mb-4">04_web</p>
+
       <div class="grid grid-cols-1 gap-2.5">
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=react" alt="React" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=react"
+               alt="React"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">React</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=fastapi" alt="FastAPI" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=fastapi"
+               alt="FastAPI"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">FastAPI</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=flask" alt="Flask" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=flask"
+               alt="Flask"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">Flask</span>
         </div>
+
         <div class="skill-item flex items-center gap-3 border border-line rounded-lg px-3 py-2.5">
-          <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind" class="w-6 h-6 shrink-0" loading="lazy" />
+          <img src="https://skillicons.dev/icons?i=tailwind"
+               alt="Tailwind"
+               class="w-6 h-6 shrink-0"
+               loading="lazy" />
           <span class="text-ink text-sm">Tailwind</span>
         </div>
+
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="relative z-10 max-w-6xl mx-auto px-6 py-28">
+
   <div class="card rounded-3xl p-10 md:p-16 text-center reveal">
-    <p class="eyebrow font-mono text-mint text-sm mb-4 justify-center flex">04_contact</p>
+
+    <p class="eyebrow font-mono text-mint text-sm mb-4 justify-center flex">
+      04_contact
+    </p>
+
     <h2 class="font-mono font-bold text-3xl sm:text-5xl mb-6 glow-text">
-      Let's build something<br/> intelligent together.
+      Let's build something<br/>
+      intelligent together.
     </h2>
+
     <p class="text-muted max-w-xl mx-auto mb-10">
       Open to internships, collaborations, and interesting AI problems.
       Reach out — I reply fast.
     </p>
 
     <div class="flex flex-wrap justify-center gap-4 font-mono text-sm">
-      <a href="mailto:arjunshajan193@gmail.com" class="bg-cyan text-bg font-bold px-6 py-3 rounded-lg hover:bg-white transition-colors">✉ Email</a>
-      <a href="https://github.com/ArjunShajan" target="_blank" rel="noopener" class="border border-line px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">GitHub</a>
-      <a href="https://www.linkedin.com/in/arjun-shajan-b68051295" target="_blank" rel="noopener" class="border border-line px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">LinkedIn</a>
-      <a href="https://leetcode.com/u/ArjunShajan/" target="_blank" rel="noopener" class="border border-line px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">LeetCode</a>
-      <a href="https://www.instagram.com/arjun_shajan_?igsh=cHc1Z3pwdnJzbWg4" target="_blank" rel="noopener" class="border border-line px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">Instagram</a>
-      <a href="https://www.facebook.com/arjun.shajan.90" target="_blank" rel="noopener" class="border border-line px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">Facebook</a>
+
+      <a href="mailto:arjunshajan193@gmail.com"
+         class="bg-cyan text-bg font-bold px-6 py-3 rounded-lg hover:bg-white transition-colors">
+        ✉ Email
+      </a>
+
+      <a href="https://github.com/ArjunShajan"
+         target="_blank"
+         rel="noopener"
+         class="border border-line px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/arjun-shajan-b68051295"
+         target="_blank"
+         rel="noopener"
+         class="border border-line px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">
+        LinkedIn
+      </a>
+
+      <a href="https://leetcode.com/u/ArjunShajan/"
+         target="_blank"
+         rel="noopener"
+         class="border border-line px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">
+        LeetCode
+      </a>
+
+      <a href="https://www.instagram.com/arjun_shajan_?igsh=cHc1Z3pwdnJzbWg4"
+         target="_blank"
+         rel="noopener"
+         class="border border-line px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">
+        Instagram
+      </a>
+
+      <a href="https://www.facebook.com/arjun.shajan.90"
+         target="_blank"
+         rel="noopener"
+         class="border border-line px-6 py-3 rounded-lg hover:border-cyan hover:text-cyan transition-colors">
+        Facebook
+      </a>
+
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="relative z-10 border-t border-line py-8">
+
   <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3 font-mono text-xs text-muted">
-    <p>© 2026 Arjun Shajan — built line by line.</p>
-    <p class="flex items-center gap-2"><span class="dot bg-mint blink-dot"></span> system status: online</p>
+
+    <p>
+      © 2026 Arjun Shajan — built line by line.
+    </p>
+
+    <p class="flex items-center gap-2">
+      <span class="dot bg-mint blink-dot"></span>
+      system status: online
+    </p>
+
   </div>
 </footer>
 
 <script>
+
   // ---------- Neural network canvas background ----------
+
   const canvas = document.getElementById('netCanvas');
   const ctx = canvas.getContext('2d');
+
   let w, h, nodes;
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const reduceMotion =
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function resize() {
     w = canvas.width = window.innerWidth;
     h = canvas.height = window.innerHeight;
   }
+
   window.addEventListener('resize', resize);
   resize();
 
-  const NODE_COUNT = Math.min(70, Math.floor((window.innerWidth * window.innerHeight) / 18000));
+  const NODE_COUNT =
+    Math.min(
+      70,
+      Math.floor((window.innerWidth * window.innerHeight) / 18000)
+    );
+
   nodes = Array.from({ length: NODE_COUNT }, () => ({
     x: Math.random() * w,
     y: Math.random() * h,
@@ -592,20 +927,38 @@
   }));
 
   function drawNet() {
+
     ctx.clearRect(0, 0, w, h);
+
     for (const n of nodes) {
+
       n.x += n.vx;
       n.y += n.vy;
+
       if (n.x < 0 || n.x > w) n.vx *= -1;
       if (n.y < 0 || n.y > h) n.vy *= -1;
     }
+
     for (let i = 0; i < nodes.length; i++) {
+
       for (let j = i + 1; j < nodes.length; j++) {
-        const a = nodes[i], b = nodes[j];
-        const d = Math.hypot(a.x - b.x, a.y - b.y);
+
+        const a = nodes[i];
+        const b = nodes[j];
+
+        const d =
+          Math.hypot(
+            a.x - b.x,
+            a.y - b.y
+          );
+
         if (d < 140) {
-          ctx.strokeStyle = `rgba(78, 225, 255, ${0.13 * (1 - d / 140)})`;
+
+          ctx.strokeStyle =
+            `rgba(78, 225, 255, ${0.13 * (1 - d / 140)})`;
+
           ctx.lineWidth = 1;
+
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
@@ -613,75 +966,186 @@
         }
       }
     }
+
     for (const n of nodes) {
-      ctx.fillStyle = 'rgba(139, 107, 255, 0.6)';
+
+      ctx.fillStyle =
+        'rgba(139, 107, 255, 0.6)';
+
       ctx.beginPath();
-      ctx.arc(n.x, n.y, 1.8, 0, Math.PI * 2);
+
+      ctx.arc(
+        n.x,
+        n.y,
+        1.8,
+        0,
+        Math.PI * 2
+      );
+
       ctx.fill();
     }
-    if (!reduceMotion) requestAnimationFrame(drawNet);
+
+    if (!reduceMotion)
+      requestAnimationFrame(drawNet);
   }
+
   drawNet();
 
+
   // ---------- Typing effect ----------
+
   function typeText(el, text, speed, cursor) {
+
     return new Promise(resolve => {
+
       let i = 0;
+
       el.innerHTML = '';
+
       const interval = setInterval(() => {
-        el.innerHTML = text.slice(0, i) + (cursor ? '<span class="terminal-cursor"></span>' : '');
+
+        el.innerHTML =
+          text.slice(0, i) +
+          (cursor
+            ? '<span class="terminal-cursor"></span>'
+            : '');
+
         i++;
+
         if (i > text.length) {
+
           clearInterval(interval);
           resolve();
         }
+
       }, speed);
+
     });
   }
+
 
   (async () => {
-    const l1 = document.getElementById('typeLine1');
-    const l2 = document.getElementById('typeLine2');
-    await typeText(l1, 'Arjun Shajan — AI & Data Science Student', reduceMotion ? 0 : 35, true);
-    l1.innerHTML = 'Arjun Shajan — AI &amp; Data Science Student';
-    await typeText(l2, 'All systems operational ✓', reduceMotion ? 0 : 35, true);
+
+    const l1 =
+      document.getElementById('typeLine1');
+
+    const l2 =
+      document.getElementById('typeLine2');
+
+    await typeText(
+      l1,
+      'Arjun Shajan — AI & Data Science Student',
+      reduceMotion ? 0 : 35,
+      true
+    );
+
+    l1.innerHTML =
+      'Arjun Shajan — AI &amp; Data Science Student';
+
+    await typeText(
+      l2,
+      'All systems operational ✓',
+      reduceMotion ? 0 : 35,
+      true
+    );
+
   })();
 
+
   // ---------- Scroll reveal ----------
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
+
+  const revealEls =
+    document.querySelectorAll('.reveal');
+
+  const io =
+    new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add('in');
+
+            io.unobserve(entry.target);
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.15
       }
-    });
-  }, { threshold: 0.15 });
+    );
+
   revealEls.forEach(el => io.observe(el));
 
+
   // ---------- Scroll progress bar ----------
-  const progressBar = document.getElementById('progressBar');
+
+  const progressBar =
+    document.getElementById('progressBar');
+
   window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    progressBar.style.width = pct + '%';
+
+    const scrollTop =
+      window.scrollY;
+
+    const docHeight =
+      document.documentElement.scrollHeight -
+      window.innerHeight;
+
+    const pct =
+      docHeight > 0
+        ? (scrollTop / docHeight) * 100
+        : 0;
+
+    progressBar.style.width =
+      pct + '%';
+
   });
 
+
   // ---------- Hero card tilt ----------
-  const tiltCard = document.getElementById('tiltCard');
-  if (tiltCard && !reduceMotion && window.matchMedia('(hover: hover)').matches) {
+
+  const tiltCard =
+    document.getElementById('tiltCard');
+
+  if (
+    tiltCard &&
+    !reduceMotion &&
+    window.matchMedia('(hover: hover)').matches
+  ) {
+
     tiltCard.addEventListener('mousemove', (e) => {
-      const rect = tiltCard.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      tiltCard.style.transform = `rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
+
+      const rect =
+        tiltCard.getBoundingClientRect();
+
+      const x =
+        (e.clientX - rect.left) /
+        rect.width - 0.5;
+
+      const y =
+        (e.clientY - rect.top) /
+        rect.height - 0.5;
+
+      tiltCard.style.transform =
+        `rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
     });
+
+
     tiltCard.addEventListener('mouseleave', () => {
-      tiltCard.style.transform = 'rotateY(0deg) rotateX(0deg)';
+
+      tiltCard.style.transform =
+        'rotateY(0deg) rotateX(0deg)';
+
     });
+
   }
+
 </script>
 
 </body>
 </html>
+```
